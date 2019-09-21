@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <AnchorPane layoutX="-8.0" layoutY="-7.0" prefHeight="551.0" prefWidth="675.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f12" height="186.0" layoutX="366.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="283.0" />
+            <Label layoutX="45.0" layoutY="64.0" text="Lamp Rating" />
+            <Label layoutX="45.0" layoutY="101.0" text="Lamp Rating" />
+            <Label layoutX="45.0" layoutY="143.0" text="Lamp Rating" />
+            <TextField fx:id="lr1" layoutX="135.0" layoutY="60.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <TextField fx:id="lr2" layoutX="135.0" layoutY="99.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <TextField fx:id="lr3" layoutX="135.0" layoutY="139.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <TextField fx:id="qty2" layoutX="289.0" layoutY="99.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Label layoutX="214.0" layoutY="101.0" text="Quantity" />
+            <Label layoutX="214.0" layoutY="64.0" text="Quantity" />
+            <Label layoutX="214.0" layoutY="143.0" text="Quantity" />
+            <TextField fx:id="qty3" layoutX="289.0" layoutY="139.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <TextField fx:id="qty1" layoutX="289.0" layoutY="60.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+            <Label layoutX="45.0" layoutY="331.0" prefHeight="17.0" prefWidth="132.0" text="Cable Type" />
+            <ComboBox fx:id="cableDrop" layoutX="189.0" layoutY="327.0" prefHeight="25.0" prefWidth="107.0" promptText="Select ..." />
+            <ComboBox fx:id="primarySizeDrop" layoutX="189.0" layoutY="369.0" prefHeight="25.0" prefWidth="107.0" promptText="Select ..." />
+            <Label layoutX="45.0" layoutY="359.0" prefHeight="45.0" prefWidth="132.0" text="Primary Cable Size" wrapText="true" />
+            <ComboBox fx:id="secondarySizeDrop" layoutX="189.0" layoutY="414.0" prefHeight="25.0" prefWidth="107.0" promptText="Select ..." />
+            <Label layoutX="45.0" layoutY="404.0" prefHeight="45.0" prefWidth="132.0" text="Secondary Cable Size" wrapText="true" />
+            <TextField fx:id="tplBox" layoutX="189.0" layoutY="184.0" prefHeight="25.0" prefWidth="107.0" promptText="Enter length " />
+            <Label layoutX="45.0" layoutY="174.0" prefHeight="45.0" prefWidth="132.0" text="Total Primary Length" wrapText="true" />
+            <Label layoutX="45.0" layoutY="219.0" prefHeight="57.0" prefWidth="132.0" text="Total Secondary Length" wrapText="true" />
+            <TextField fx:id="tslBox" layoutX="189.0" layoutY="235.0" prefHeight="25.0" prefWidth="107.0" promptText="Enter length" />
+            <ComboBox fx:id="currentDrop" layoutX="189.0" layoutY="284.0" prefHeight="25.0" prefWidth="107.0" promptText="Select ..." />
+            <Label layoutX="45.0" layoutY="288.0" prefHeight="17.0" prefWidth="132.0" text="Current" />
+            <Button fx:id="calculate" layoutX="190.0" layoutY="471.0" mnemonicParsing="false" onAction="#calculate" text="Calculate" />
+            <Button fx:id="reset" layoutX="293.0" layoutY="471.0" mnemonicParsing="false" text="Reset" />
+            <Label layoutX="375.0" layoutY="288.0" prefHeight="17.0" prefWidth="132.0" text="Total CCR Load ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="375.0" layoutY="331.0" prefHeight="17.0" prefWidth="132.0" text="Max Voltage">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="375.0" layoutY="373.0" prefHeight="17.0" prefWidth="144.0" text="Recommended CCR Size">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="375.0" layoutY="418.0" prefHeight="17.0" prefWidth="132.0" text="CCR Utilisation">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="totalLoadBox" contentDisplay="RIGHT" layoutX="526.0" layoutY="288.0" prefHeight="17.0" prefWidth="74.0" textAlignment="RIGHT" />
+            <Label fx:id="maxVoltageBox" contentDisplay="RIGHT" layoutX="526.0" layoutY="331.0" prefHeight="17.0" prefWidth="74.0" textAlignment="RIGHT" />
+            <Label fx:id="ccrSizeBox" contentDisplay="RIGHT" layoutX="526.0" layoutY="373.0" prefHeight="17.0" prefWidth="74.0" textAlignment="RIGHT" />
+            <Label fx:id="utilisationBox" contentDisplay="RIGHT" layoutX="526.0" layoutY="418.0" prefHeight="17.0" prefWidth="74.0" textAlignment="RIGHT" />
+            <Label layoutX="620.0" layoutY="288.0" text="Va" />
+            <Label layoutX="620.0" layoutY="331.0" text="V" />
+            <Label layoutX="620.0" layoutY="373.0" text="kVa" />
+            <Label layoutX="620.0" layoutY="418.0" text="\%" />
+            <Label layoutX="316.0" layoutY="288.0" text="A" />
+            <Label layoutX="312.0" layoutY="373.0" prefHeight="17.0" prefWidth="33.0" text="mm2" />
+            <Label layoutX="312.0" layoutY="418.0" prefHeight="17.0" prefWidth="33.0" text="mm2" />
+            <Label layoutX="315.0" layoutY="188.0" text="m" />
+            <Label layoutX="315.0" layoutY="239.0" text="m" />
+         </children>
+      </AnchorPane>
+      <Box />
+   </children>
+</AnchorPane>
